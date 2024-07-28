@@ -31,16 +31,14 @@ The nonprofit aims to double its annual fundraising over the next five years. Th
 
 ## Files in the Repository
 - `donor_ltv_analysis.ipynb`: Jupyter notebook containing the main analysis
-- `ltv_model.py`: Python script with the LTV model implementation
-- `utils.py`: Utility functions for data processing and visualization
 - `requirements.txt`: List of required Python packages
-- `data/`: Directory containing the dataset
+- `donor_data.csv`: Sample of historical donor data
+- `campaign_data.csv`: Campaign data
 
 ## Key Visualizations
 - Donor Segmentation Heatmap
 - Retention Rate Trends by Segment
 - Seasonal Donation Patterns
-- Lead Source Effectiveness Scatter Plot
 - LTV Prediction vs Actual Scatter Plot
 - Revenue and ROI Sensitivity Analysis Heatmaps
 
