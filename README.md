@@ -10,18 +10,16 @@ The nonprofit aims to double its annual fundraising over the next five years. Th
 3. How can we segment donors effectively to tailor engagement strategies?
 
 ## Key Findings
-1. Donor Segmentation: Identified four key donor segments (Small, Medium, Large, Major) with distinct behaviors and retention rates.
+1. Donor Segmentation: Identified three key donor segments (Small, Medium, Large) with distinct behaviors and retention rates.
 2. Retention Analysis: Discovered improving retention rates across all segments since 2017, with Major donors showing the highest retention at 85% in 2022.
 3. Seasonal Trends: Observed significant concentration of donations in December and Q4.
-4. Lead Source Impact: Identified the most effective lead sources for both total donations and number of donors acquired.
-5. LTV Model: Developed a predictive model for donor LTV, incorporating factors such as first donation amount, donor segment, and retention probability.
-6. Sensitivity Analysis: Conducted analysis on how changes in donation amounts and retention rates impact revenue and ROI, providing insights for strategic decision-making.
+4. LTV Model: Developed a predictive model for donor LTV, incorporating factors such as first donation amount, donor segment, and retention probability.
+5. Sensitivity Analysis: Conducted analysis on how changes in donation amounts and retention rates impact revenue and ROI, providing insights for strategic decision-making.
 
 ## Technologies Used
 - Python 3.8+
 - Pandas for data manipulation
 - Scikit-learn for machine learning models
-- Lifelines for survival analysis
 - Matplotlib and Seaborn for data visualization
 - Jupyter Notebooks for interactive analysis
 
@@ -52,9 +50,6 @@ The nonprofit aims to double its annual fundraising over the next five years. Th
 - Implement A/B testing framework for engagement strategies
 - Explore machine learning techniques for donor churn prediction
 - Conduct cohort analysis to understand long-term donor behavior
-
-## Contributing
-Contributions to this project are welcome! Please refer to the `CONTRIBUTING.md` file for guidelines on how to make contributions.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
