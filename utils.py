@@ -2,11 +2,54 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def load_and_clean_data(file_path):
-    """Load and clean the donor data."""
-    df = pd.read_csv(file_path)
-    # Add your data cleaning steps here
+def load_data(file_path):
+    """Load the donor data from a CSV file."""
+    return pd.read_csv(file_path)
+
+def clean_data(df):
+    """Clean and preprocess the donor data."""
+    # Rename columns
+    df = df.rename(columns={'Totan donations in 2022': 'Total donations in 2022',
+                            'Was their first donation an automatically-recurring transaction?': 'recurring'})
+    
+    # Convert dollar columns to numerical (float)
+    dollar_columns = ['Total donations in 2017', 'Total donations in 2018',
+                      'Total donations in 2019', 'Total donations in 2020',
+                      'Total donations in 2021', 'Total donations in 2022',
+                      'Total donations in 2023', 'Amount of first donation',
+                      'Amount of last donation', 'Highest amount donated in one year']
+
+    def dollar_to_float(dollar_str):
+        if isinstance(dollar_str, str):
+            return round(float(dollar_str.replace('$', '').replace(',', '')), 2)
+        return dollar_str
+
+    for column in dollar_columns:
+        df[column] = df[column].apply(dollar_to_float)
+
+    # Convert date columns to datetime
+    date_columns = ['Date of first donation', 'Date of last donation']
+    df[date_columns] = df[date_columns].apply(pd.to_datetime, errors='coerce')
+
+    # Handle missing values
+    for column in df.columns:
+        if df[column].dtype == 'object':
+            df[column] = df[column].fillna('Unknown')
+        else:
+            df[column] = df[column].fillna(0)
+
+    # Create 'Total Gifts' column
+    donation_columns = [f'Total donations in {year}' for year in range(2017, 2024)]
+    df['Total Gifts'] = df[donation_columns].sum(axis=1)
+
     return df
+
+# Load and clean the data
+df = load_data('/content/donor_data.csv')
+df = clean_data(df)
+
+print(df.info())
+df.head()
 
 def plot_donation_distribution(df, column, title):
     """Plot the distribution of donations."""
