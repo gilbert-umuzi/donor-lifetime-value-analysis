@@ -31,4 +31,4 @@ Before analysis, the data undergoes the following preprocessing steps:
 2. Conversion of date strings to datetime objects
 3. Calculation of derived features (e.g., donor age, total donation amount)
 
-These steps are handled in the `load_and_clean_data` function in `utils.py`.
+These steps are handled in `donor_ltv_analysis.ipynb`.
