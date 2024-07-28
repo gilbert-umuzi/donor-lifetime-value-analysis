@@ -34,7 +34,7 @@ The nonprofit aims to double its annual fundraising over the next five years. Th
 - `ltv_model.py`: Python script with the LTV model implementation
 - `utils.py`: Utility functions for data processing and visualization
 - `requirements.txt`: List of required Python packages
-- `data/`: Directory containing the dataset (if publicly shareable)
+- `data/`: Directory containing the dataset
 
 ## Key Visualizations
 - Donor Segmentation Heatmap
