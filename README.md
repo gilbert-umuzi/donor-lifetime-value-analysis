@@ -15,6 +15,7 @@ The nonprofit aims to double its annual fundraising over the next five years. Th
 3. Seasonal Trends: Observed significant concentration of donations in December and Q4.
 4. Lead Source Impact: Identified the most effective lead sources for both total donations and number of donors acquired.
 5. LTV Model: Developed a predictive model for donor LTV, incorporating factors such as first donation amount, donor segment, and retention probability.
+6. Sensitivity Analysis: Conducted analysis on how changes in donation amounts and retention rates impact revenue and ROI, providing insights for strategic decision-making.
 
 ## Technologies Used
 - Python 3.8+
@@ -28,18 +29,32 @@ The nonprofit aims to double its annual fundraising over the next five years. Th
 1. Clone this repository
 2. Install required packages: `pip install -r requirements.txt`
 3. Run Jupyter Notebook: `jupyter notebook`
-4. Open `data_analysis.ipynb` to view the analysis
+4. Open `donor_ltv_analysis.ipynb` to view the analysis
 
 ## Files in the Repository
-- `data_analysis.ipynb`: Jupyter notebook containing the main analysis
+- `donor_ltv_analysis.ipynb`: Jupyter notebook containing the main analysis
 - `ltv_model.py`: Python script with the LTV model implementation
 - `utils.py`: Utility functions for data processing and visualization
 - `requirements.txt`: List of required Python packages
+- `data/`: Directory containing the dataset (if publicly shareable)
+
+## Key Visualizations
+- Donor Segmentation Heatmap
+- Retention Rate Trends by Segment
+- Seasonal Donation Patterns
+- Lead Source Effectiveness Scatter Plot
+- LTV Prediction vs Actual Scatter Plot
+- Revenue and ROI Sensitivity Analysis Heatmaps
 
 ## Future Work
 - Incorporate more donor demographic data for refined segmentation
 - Develop a dynamic dashboard for real-time LTV tracking
 - Implement A/B testing framework for engagement strategies
+- Explore machine learning techniques for donor churn prediction
+- Conduct cohort analysis to understand long-term donor behavior
+
+## Contributing
+Contributions to this project are welcome! Please refer to the `CONTRIBUTING.md` file for guidelines on how to make contributions.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
